@@ -1,6 +1,7 @@
 package tyss.vtiger.test;
 
 import org.testng.Assert;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
 import tyss.vtiger.genericUtility.Base;
@@ -9,14 +10,16 @@ import tyss.vtiger.pom.HomePage;
 
 
 
-
+@Listeners(tyss.vtiger.genericUtility.ListnerIMP.class)
 public class CreateContactTest extends Base {
 	//public WebdriverUtility webutil;
 	//	public HomePage home;
-	@Test
+//	@Test(retryAnalyzer = tyss.vtiger.genericUtility.RetryAnalyser.class)
+	
+	@Test()
 	public void createContact() throws Throwable{
 
-		String expectedText="Last Name cannot be empty";
+		String expectedText="Last Name cannot be empt";
 
 		HomePage home = new HomePage(driver);
 		home.clickOnContactLink();

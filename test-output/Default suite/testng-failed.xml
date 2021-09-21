@@ -3,12 +3,15 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="tyss.vtiger.test.DemoTestNG">
+      <class name="tyss.vtiger.test.CreateContactTest">
         <methods>
-          <include name="test3"/>
-          <include name="test1"/>
+          <include name="initBrowser"/>
+          <include name="logout"/>
+          <include name="createContact"/>
+          <include name="closeBrowser"/>
+          <include name="login"/>
         </methods>
-      </class> <!-- tyss.vtiger.test.DemoTestNG -->
+      </class> <!-- tyss.vtiger.test.CreateContactTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

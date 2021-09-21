@@ -6,7 +6,6 @@ import java.awt.datatransfer.Clipboard;
 import java.awt.datatransfer.StringSelection;
 import java.awt.event.KeyEvent;
 import java.io.File;
-import java.sql.Driver;
 import java.util.Set;
 import java.util.concurrent.TimeUnit;
 
@@ -99,10 +98,10 @@ public class WebdriverUtility {
 //			}
 //		}	
 //	}
-	public void takeScreenShot(WebDriver driver, String screenShot) throws Throwable {
+	public void takeScreenShot(WebDriver driver, String screenShotName) throws Throwable {
 		TakesScreenshot ts = (TakesScreenshot)driver;
 		File file = ts.getScreenshotAs(OutputType.FILE);
-		File destination = new File(".\\screenShots\\"+screenShot+".png");
+		File destination = new File(".\\screenShots\\"+screenShotName+".png");
 		Files.copy(file, destination);
 	}
 	public void fileUpload(String filePath) throws Throwable {

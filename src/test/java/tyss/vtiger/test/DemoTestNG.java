@@ -1,16 +1,16 @@
 package tyss.vtiger.test;
 
-import static org.testng.Assert.assertEquals;
-
 import org.testng.Assert;
 import org.testng.SkipException;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 
+import tyss.vtiger.genericUtility.Base;
+
 @Listeners(tyss.vtiger.genericUtility.ListnerIMP.class)
-public class DemoTestNG {
-	@Test()
+public class DemoTestNG extends Base {
+	@Test(groups = "smoke")
 	public void test1() {
 		System.out.println("msg from test1");
 		Assert.assertEquals(false, true);

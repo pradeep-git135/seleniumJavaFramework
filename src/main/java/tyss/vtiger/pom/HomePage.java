@@ -14,7 +14,7 @@ public class HomePage extends WebdriverUtility {
 	public HomePage(WebDriver driver) {
 
 //		this.driver= driver;
-		PageFactory.initElements( driver, this);
+		PageFactory.initElements(driver, this);
 		this.driver = driver;
 	}
 	@FindBy(xpath = "//a[text() = 'Contacts']") private WebElement contactsLink;
@@ -24,6 +24,8 @@ public class HomePage extends WebdriverUtility {
 	@FindBy(xpath = "//a[. = 'Sign Out']") private WebElement signOutLink;
 	
 	@FindBy(xpath = "//a[. = 'Calendar']") private WebElement calenderLink;
+	
+	@FindBy(xpath = "//td[@class='tabUnSelected']/a[text() = 'Organizations']") private WebElement organizationLink;
 	
 	
 
@@ -41,9 +43,16 @@ public class HomePage extends WebdriverUtility {
 	public WebElement getContactsLink() {
 		return contactsLink;
 	} 
+	public WebElement getOrganizationLink() {
+		return organizationLink;
+	}
 
 	public void clickOnContactLink() {
 		contactsLink.click();
+	}
+	
+	public void clickOnOrganizationLink() {
+		organizationLink.click();
 	}
 	public void logingout() throws InterruptedException {
 		Thread.sleep(2000);

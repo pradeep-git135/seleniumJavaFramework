@@ -10,13 +10,12 @@ import org.json.simple.parser.ParseException;
 
 public class JsonUtility {
 	public static void main(String[] args) throws Throwable {
-		getJsonData("fname");
-		
+		getJsonData("fname");	
 	}
 
 	public static Object getJsonData(String key) throws FileNotFoundException, IOException, ParseException {
 		FileReader fis = new FileReader("F:\\seleniumJava\\practiceSelenium\\dataFile\\jsonfile.json");
-		JSONParser jParse=new JSONParser();
+		JSONParser jParse = new JSONParser();
 		 HashMap job = (HashMap) jParse.parse(fis);//("fname"="pradeep",)
 		return job.get(key);
 	}

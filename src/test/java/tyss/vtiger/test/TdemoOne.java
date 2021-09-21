@@ -1,5 +1,7 @@
 package tyss.vtiger.test;
 
+import org.testng.annotations.AfterSuite;
+import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.BeforeTest;
 
@@ -17,7 +19,16 @@ public class TdemoOne {
 		System.out.println("before test");
 	}
 	
-	@BeforeSuite
+	
+	
+	
+	@AfterTest
+	public void testAtest()
+	{
+		System.out.println("after test");
+	}
+	
+	@AfterSuite
 	public void testAfterSuite()
 	{
 		System.out.println("after suite");

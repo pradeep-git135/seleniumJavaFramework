@@ -1,6 +1,8 @@
 package tyss.vtiger.test;
 
-public class MainClass {
+import tyss.vtiger.genericUtility.Base;
+
+public class MainClass extends Base {
 
 	public static void main(String[] args) {
 		A a=new B();
